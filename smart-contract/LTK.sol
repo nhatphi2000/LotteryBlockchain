@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: MIT LICENSE
 
+
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
@@ -10,7 +11,7 @@ import "@openzeppelin/contracts/access/AccessControl.sol";
 
 pragma solidity ^0.8.7;
 
-contract LTKRewards is ERC20, ERC20Burnable, Ownable, AccessControl {
+contract LTK is ERC20, ERC20Burnable, Ownable, AccessControl {
   using SafeMath for uint256;
 
   mapping(address => uint256) private _balances;
@@ -21,7 +22,7 @@ contract LTKRewards is ERC20, ERC20Burnable, Ownable, AccessControl {
 
   bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
 
-  constructor() ERC20("LTK Rewards", "LTKR") {
+  constructor() ERC20("LTK Rewards", "LTK") {
         _setupRole(DEFAULT_ADMIN_ROLE, _msgSender());
         _setupRole(MINTER_ROLE, _msgSender());
       }
