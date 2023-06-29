@@ -8,6 +8,10 @@ const corsOptions ={
 app.use(cors(corsOptions))
 app.use(require('body-parser').json());
 
+const n2dLotto = `
+ █   ▄▀▄ ▀█▀ ▀█▀ ▄▀▄
+ █▄▄ ▀▄▀  █   █  ▀▄▀
+`
 const drawnum = `
 █▀▄ █▀▄ ▄▀▄ █   █ █ █▄ █ ▄▀    █▄ █ █ █ █▄ ▄█ ██▄ ██▀ █▀▄ ▄▀▀
 █▄▀ █▀▄ █▀█ ▀▄▀▄▀ █ █ ▀█ ▀▄█   █ ▀█ ▀▄█ █ ▀ █ █▄█ █▄▄ █▀▄ ▄██
@@ -145,6 +149,7 @@ const runtimer = async () => {
         storeTime(drawreset);
         timeleft = drawreset;
     } else {
+        console.log(timeleft)
         timeleft -= 1000;
         storeTime(timeleft);
     }
@@ -183,7 +188,6 @@ function executeLotto() {
 const server = app.listen(8082, function () {
     const port = server.address().port;
     console.log('');
-    console.log(n2dlogo)
     console.log('');
     console.log(n2dLotto);
     runtimer();
