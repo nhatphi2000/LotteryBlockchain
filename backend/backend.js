@@ -8,7 +8,7 @@ const corsOptions ={
 app.use(cors(corsOptions))
 app.use(require('body-parser').json());
 
-const n2dLotto = `
+const Lotto = `
  █   ▄▀▄ ▀█▀ ▀█▀ ▄▀▄
  █▄▄ ▀▄▀  █   █  ▀▄▀
 `
@@ -189,7 +189,7 @@ const server = app.listen(8082, function () {
     const port = server.address().port;
     console.log('');
     console.log('');
-    console.log(n2dLotto);
+    console.log(Lotto);
     runtimer();
     console.log("Backend API listening over port: " + port);
   });
