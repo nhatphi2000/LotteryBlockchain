@@ -17,3 +17,5 @@ node backend.js </br>
 cd lotery-frontend</br>
 npm i</br>
 npm run dev</br>
+
+video demo: https://www.youtube.com/watch?v=RVZSpgWT1JE
