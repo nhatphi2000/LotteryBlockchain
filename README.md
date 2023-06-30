@@ -1,11 +1,10 @@
 # LotteryBlockchain
 
-# First Commit
-
 Tài liệu tham khảo:
 
-www.youtube.com/watch?v=zBkYTAIMnN4&list=PLLkrq2VBYc1bvQvr-qogw1bxe3wmc61zG&index=2</br>
+www.youtube.com/@net2dev </br>
 docs.chain.link/vrf/v2/introduction</br>
+docs.soliditylang.org/en/v0.5.3/abi-spec.html</br>
 
 # Install and run backend
 
@@ -13,4 +12,8 @@ cd backend </br>
 npm i </br>
 node backend.js </br>
 
+# Install and run backend
 
+cd lotery-frontend</br>
+npm i</br>
+npm run dev</br>
