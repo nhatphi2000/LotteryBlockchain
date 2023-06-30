@@ -44,6 +44,7 @@ export default function Lottery() {
         if (timeleft <= 0) {
           clearInterval(downloadTimer);
           console.log("completed");
+          window.location.reload();
         } else {
           let hour = Math.floor((timeleft / (1000 * 60 * 60)) % 24);
           document.getElementById("hours").innerHTML = hour;
@@ -165,17 +166,17 @@ const removeDigits = () => {
   return (
     <div className="appback">
       <Container sm gap={3}>
-        <Row gap={0} justify="left" align="left">
+        <Row gap={1} justify="left" align="left">
           <Col>
             <Row>
               <img src="star-small.png" alt="" width="70px" height="62px" />
             </Row>
             <Row>
-              <img src="star-big.png" alt="" width="124px" height="109px" />
+              <img src="star-big.png" alt="" width="124px" height="85px" />
             </Row>
-            <Spacer />
-            <Row>
-              <img src="cartoon1.png" alt="" width="223px" height="300px" />
+              <Spacer />
+              <Row justify="right" align="right">
+                <img src="cartoon2.png" alt="" width="260px" height="270px" />
             </Row>
           </Col>
           <Col>
@@ -215,14 +216,14 @@ const removeDigits = () => {
           </Text>
           </Row>
           <Row>
-          <Text css={{ml:'$3', textShadow:'0px 0px 3px #ffffff', fontFamily:'SF Pro Display', fontWeight:'$bold'}} 
-          size="45px" color="#ffff00" id="hours"/>
+          <Text css={{ml:'$3', textShadow:'0px 0px 3px', fontFamily:'SF Pro Display', fontWeight:'$bold'}}
+          size="45px" color="#ff1744" id="hours"/>
           <Text color="white" css={{ fontFamily:'SF Pro Display', ml:'$3', fontSize:'18px'}}>Hours</Text>
-          <Text css={{ml:'$5', textShadow:'0px 0px 3px #ffffff', fontFamily:'SF Pro Display', fontWeight:'$bold'}} 
-          size="45px" color="#ffff00"id="minutes"/>
+          <Text css={{ml:'$5', textShadow:'0px 0px 3px', fontFamily:'SF Pro Display', fontWeight:'$bold'}}
+          size="45px" color="#ff1744"id="minutes"/>
           <Text color="white" css={{ fontFamily:'SF Pro Display', ml:'$3', fontSize:'18px'}} >Minutes</Text>
-          <Text css={{ml:'$5', textShadow:'0px 0px 3px #ffffff', fontFamily:'SF Pro Display', fontWeight:'$bold'}} 
-          size="45px" color="#ffff00"id="seconds"/>
+          <Text css={{ml:'$5', textShadow:'0px 0px 3px', fontFamily:'SF Pro Display', fontWeight:'$bold'}}
+          size="45px" color="#ff1744"id="seconds"/>
           <Text color="white" css={{ fontFamily:'SF Pro Display', fontSize:'18px'}}>Seconds</Text>
           </Row>
           </Grid>
