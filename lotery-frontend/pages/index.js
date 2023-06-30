@@ -445,69 +445,79 @@ const removeDigits = () => {
             mb: "$3",
           }}
         >
-          <Row gap={0} justify="center" align="center">
-            <Text color="white" css={{ textShadow: "0px 0px 3px #000000" }} h2>
-              Draw #{lotto - 1} Results
-            </Text>
-          </Row>
-          <Row gap={0} css={{ margin: "$5" }} justify="center" align="center">
-            <div className="wrap">
-              <Row>
-                <section className="stage">
-                  <figure className="ball">
-                    <span className="number">
-                      {win1}
-                    </span>
-                  </figure>
-                </section>
-                <section className="stage">
-                  <figure className="ball">
-                    <span className="number" >
-                      {win2}
-                    </span>
-                  </figure>
-                </section>
-                <section className="stage">
-                  <figure className="ball">
-                    <span className="number">
-                     {win3}
-                    </span>
-                  </figure>
-                </section>
-                <section className="stage">
-                  <figure className="ball">
-                    <span className="number" >
-                     {win4}
-                    </span>
-                  </figure>
-                </section>
-                <section className="stage">
-                  <figure className="ball">
-                    <span className="number">
-                     {win5}
-                    </span>
-                  </figure>
-                </section>
-                <section className="stage">
-                  <figure className="ball">
-                    <span className="number">
-                     {win6}
-                    </span>
-                  </figure>
-                </section>
-              </Row>
-            </div>
-          </Row>
-      <Spacer/>
-      <Row>
-            <Button auto size='md' ghost
-                    onPress={claim}
-                    css={{display:'flex',
-                    justifyContent:'center', 
-                    color:'white',
-                    fontSize:'$2xl'
-                    }}>Claim</Button>
-                    </Row>
+          <Card.Body css={{ position: "absolute", zIndex: 1, top: 5, overflow: "hidden" }}>
+
+            <Row gap={0} justify="center" align="center">
+              <Text color="white" css={{ textShadow: "0px 0px 3px #000000" }} h2>
+                Draw #{lotto - 1} Results
+              </Text>
+            </Row>
+            <Row gap={0} css={{ margin: "$5" }} justify="center" align="center">
+              <div className="wrap">
+                <Row>
+                  <section className="stage">
+                    <figure className="ball">
+                      <span className="number">
+                        {win1}
+                      </span>
+                    </figure>
+                  </section>
+                  <section className="stage">
+                    <figure className="ball">
+                      <span className="number" >
+                        {win2}
+                      </span>
+                    </figure>
+                  </section>
+                  <section className="stage">
+                    <figure className="ball">
+                      <span className="number">
+                      {win3}
+                      </span>
+                    </figure>
+                  </section>
+                  <section className="stage">
+                    <figure className="ball">
+                      <span className="number" >
+                      {win4}
+                      </span>
+                    </figure>
+                  </section>
+                  <section className="stage">
+                    <figure className="ball">
+                      <span className="number">
+                      {win5}
+                      </span>
+                    </figure>
+                  </section>
+                  <section className="stage">
+                    <figure className="ball">
+                      <span className="number">
+                      {win6}
+                      </span>
+                    </figure>
+                  </section>
+                </Row>
+              </div>
+            </Row>
+        <Spacer/>
+        <Row>
+              <Button auto size='md' ghost
+                      onPress={claim}
+                      css={{display:'flex',
+                      justifyContent:'center', 
+                      color:'white',
+                      fontSize:'$2xl'
+                      }}>Claim</Button>
+                      </Row>
+          </Card.Body>
+          <Card.Image
+            src="jackpot.jpg"
+            objectFit="cover"
+            width="100%"
+            height={340}
+            alt="Card image background"
+          />
       </Card>
       <Text h2 css={{display:'flex', justifyContent:'center'}}>
           Previous Draw Results
